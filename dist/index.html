@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"  integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+</head>
+<body>
+    <!-- Split into 3 even rows -->
+    <div class="row"> 
+        <div class="container">
+            <div style="left: 0;"class="stats shop shadow-lg col-2"></div>
+            <div class="row">
+                <div class="col">
+                    <div class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
+                        <b id="Autoclickers">Autoclickers: </b>
+                        <b id="dblpoints">Double Points: </b>
+                        <img ondragstart="return false;" type="button" id="button__cookie" class="m-2 btn__onclick btn-primary" alt="Cookie" src="imgs/cookie.png"></img>
+                        <!-- ^^^^^^^^^^^ Makes so you can't drag the cookie (no stealing it) -->
+                        <img src="imgs/clicker.png" id="indicator" width="24" height="24" alt="Autoclicker(s)"></img> <!--Indicates if autoclicker is active -->
+                        <span id="cookie__counter" style="font-size: 30px; font-weight: bold;">0</span>
+                    </div>
+                </div>
+            </div>
+            <div class="shop shadow-lg col-2">
+                <div class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
+                    <button type="button" id="button__autoclick" style="background-color: red;"
+                    class="btn btn__onclick">Autoclicker</button>
+                    <button type="button" id="button__dblpoints" style="background-color: red;"
+                    class="m-2 btn btn__onclick">Double Points</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- Bootstrap JavaScript Libraries -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+<script src="index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+</body>
+</html>
