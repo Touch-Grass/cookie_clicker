@@ -14,12 +14,15 @@
     <!-- Split into 3 even rows -->
     <div class="row"> 
         <div class="container">
-            <div style="left: 0;"class="stats shop shadow-lg col-2"></div>
             <div class="row">
                 <div class="col">
+                    <div style="left: 0;" class="stats shop shadow-lg col-2">
+                        <div class="d-flex flex-column min-vh-100 justify-content-start align-items-start ms-1">
+                            <b id="Autoclickers">Autoclickers: </b>
+                            <b id="dblpoints">Double Points: </b>
+                        </div>
+                    </div>
                     <div class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
-                        <b id="Autoclickers">Autoclickers: </b>
-                        <b id="dblpoints">Double Points: </b>
                         <img ondragstart="return false;" type="button" id="button__cookie" class="m-2 btn__onclick btn-primary" alt="Cookie" src="imgs/cookie.png"></img>
                         <!-- ^^^^^^^^^^^ Makes so you can't drag the cookie (no stealing it) -->
                         <img src="imgs/clicker.png" id="indicator" width="24" height="24" alt="Autoclicker(s)"></img> <!--Indicates if autoclicker is active -->
@@ -28,11 +31,11 @@
                 </div>
             </div>
             <div class="shop shadow-lg col-2">
-                <div class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
-                    <button type="button" id="button__autoclick" style="background-color: red;"
-                    class="btn btn__onclick">Autoclicker</button>
-                    <button type="button" id="button__dblpoints" style="background-color: red;"
-                    class="m-2 btn btn__onclick">Double Points</button>
+                <div class="d-flex flex-column min-vh-100 justify-content-start align-items-center">
+                    <button type="button" id="button__autoclick" style="background-color: #D2222D;"
+                    class="col-11 mt-1 btn btn__onclick">Autoclicker</button>
+                    <button type="button" id="button__dblpoints" style="background-color: #D2222D;"
+                    class="col-11 mt-1 btn btn__onclick">Double Points</button>
                 </div>
             </div>
         </div>

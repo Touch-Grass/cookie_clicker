@@ -18,9 +18,9 @@ let doublePointsPrice = 10;
 indicator.style.display= 'none';
 
 cookie?.addEventListener('click', () => {
-    addClick(!doublePointsBought ? 2 : 1); 
+    addClick(!doublePointsBought ? 1 : 2);
 });
-    
+
 autoclicker?.addEventListener('mouseup', (e: any) => {
     if (clicks >= 3) {
         autoclickerCount++;
@@ -28,9 +28,8 @@ autoclicker?.addEventListener('mouseup', (e: any) => {
         addClick(-3); //Takes away score
         addAutoclicker(); //Adds an instance of the autoclicker to the player, this way multiple can be stacked.
         return;
-    } else {
-        return;
     }
+    return; //Ends function if you can't afford autoclicker.
 });
 
 doublePoints?.addEventListener('mouseup', (e: any) => {
@@ -39,24 +38,23 @@ doublePoints?.addEventListener('mouseup', (e: any) => {
         doublePointsBought = true;
         document.getElementById('dblpoints')!.innerHTML = `Double Points: ${doublePointsBought}`;
         return;
-    } else {
-        return;
     }
+    return;
 });
 
 function addClick(amount: number){
     clicks += amount;
     counter!.innerHTML = clicks;
     if (clicks >= autoclickerPrice) {
-        autoclicker!.style.backgroundColor = 'green';
+        autoclicker!.style.backgroundColor = '#238823';
     } else {
-        autoclicker!.style.backgroundColor = 'red';
+        autoclicker!.style.backgroundColor = '#D2222D';
     }
-
+    
     if (clicks >= doublePointsPrice) {
-        doublePoints!.style.backgroundColor = 'green';
+        doublePoints!.style.backgroundColor = '#238823';
     } else {
-        doublePoints!.style.backgroundColor = 'red';
+        doublePoints!.style.backgroundColor = '#D2222D';
     }
 }
 
@@ -71,5 +69,3 @@ function addAutoclicker() {
         cookie!.style.animation = `pulse__cookie ${aniSpeed}s linear infinite`;
     }, 1000);
 }
-
-da

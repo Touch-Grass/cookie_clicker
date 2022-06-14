@@ -11,7 +11,7 @@ let autoclickerPrice = 3;
 let doublePointsPrice = 10;
 indicator.style.display = 'none';
 cookie === null || cookie === void 0 ? void 0 : cookie.addEventListener('click', () => {
-    addClick(!doublePointsBought ? 2 : 1);
+    addClick(!doublePointsBought ? 1 : 2);
 });
 autoclicker === null || autoclicker === void 0 ? void 0 : autoclicker.addEventListener('mouseup', (e) => {
     if (clicks >= 3) {
@@ -21,9 +21,7 @@ autoclicker === null || autoclicker === void 0 ? void 0 : autoclicker.addEventLi
         addAutoclicker();
         return;
     }
-    else {
-        return;
-    }
+    return;
 });
 doublePoints === null || doublePoints === void 0 ? void 0 : doublePoints.addEventListener('mouseup', (e) => {
     if (clicks >= doublePointsPrice && !doublePointsBought) {
@@ -32,24 +30,22 @@ doublePoints === null || doublePoints === void 0 ? void 0 : doublePoints.addEven
         document.getElementById('dblpoints').innerHTML = `Double Points: ${doublePointsBought}`;
         return;
     }
-    else {
-        return;
-    }
+    return;
 });
 function addClick(amount) {
     clicks += amount;
     counter.innerHTML = clicks;
     if (clicks >= autoclickerPrice) {
-        autoclicker.style.backgroundColor = 'green';
+        autoclicker.style.backgroundColor = '#238823';
     }
     else {
-        autoclicker.style.backgroundColor = 'red';
+        autoclicker.style.backgroundColor = '#D2222D';
     }
     if (clicks >= doublePointsPrice) {
-        doublePoints.style.backgroundColor = 'green';
+        doublePoints.style.backgroundColor = '#238823';
     }
     else {
-        doublePoints.style.backgroundColor = 'red';
+        doublePoints.style.backgroundColor = '#D2222D';
     }
 }
 function addAutoclicker() {
