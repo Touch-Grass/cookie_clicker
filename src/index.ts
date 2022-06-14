@@ -71,3 +71,5 @@ function addAutoclicker() {
         cookie!.style.animation = `pulse__cookie ${aniSpeed}s linear infinite`;
     }, 1000);
 }
+
+da
